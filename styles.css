@@ -1,0 +1,249 @@
+:root {
+  --primary: #0f766e;
+  --secondary: #f59e0b;
+  --dark: #111827;
+  --light: #f9fafb;
+  --muted: #6b7280;
+  --border: #e5e7eb;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', Arial, sans-serif;
+  background: linear-gradient(135deg, #ecfeff 0%, #fef3c7 100%);
+  color: var(--dark);
+  line-height: 1.6;
+  min-height: 100vh;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.header {
+  width: 100%;
+  margin: 0;
+  background: linear-gradient(90deg, #0f172a 0%, #134e4a 60%, #0f766e 100%);
+  color: white;
+  padding: 22px 36px;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.logo {
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  background: white;
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 20px;
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.15);
+}
+
+.brand h1 {
+  font-size: 28px;
+  color: white;
+  font-weight: 800;
+}
+
+.brand p {
+  color: #d1fae5;
+  font-size: 14px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  padding: 8px 12px;
+  border-radius: 999px;
+  transition: all 0.2s ease;
+}
+
+.nav-links a:hover {
+  background: rgba(255, 255, 255, 0.16);
+  transform: translateY(-1px);
+}
+
+.badge {
+  background: rgba(255, 255, 255, 0.16);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 999px;
+  padding: 8px 14px;
+  font-weight: 700;
+}
+
+.hero {
+  margin-top: 24px;
+  background: linear-gradient(125deg, var(--primary) 0%, #134e4a 55%, #0f172a 100%);
+  color: white;
+  padding: 36px;
+  border-radius: 28px;
+  display: grid;
+  grid-template-columns: 1.3fr 0.9fr;
+  gap: 24px;
+  align-items: center;
+  box-shadow: 0 20px 45px rgba(15, 23, 42, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top right, rgba(255, 255, 255, 0.18), transparent 35%);
+  pointer-events: none;
+}
+
+.hero h2 {
+  font-size: clamp(24px, 3vw, 36px);
+  margin-bottom: 10px;
+  line-height: 1.2;
+}
+
+.hero p {
+  color: #d1fae5;
+  max-width: 600px;
+}
+
+.hero-card {
+  background: rgba(255, 255, 255, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 18px;
+  padding: 20px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.hero-card h3 {
+  margin-bottom: 8px;
+  font-size: 20px;
+}
+
+.products {
+  margin-top: 28px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.card {
+  background: white;
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 16px 35px rgba(15, 23, 42, 0.08);
+  border: 1px solid var(--border);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 50px rgba(15, 23, 42, 0.14);
+}
+
+.card-image {
+  height: 180px;
+  background: linear-gradient(135deg, #fef3c7, #fde68a);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 58px;
+}
+
+.card-body {
+  padding: 20px 22px 24px;
+}
+
+.card h3 {
+  font-size: 22px;
+  margin-bottom: 8px;
+  color: var(--dark);
+}
+
+.meta {
+  color: var(--muted);
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+.price {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, var(--primary), #0d9488);
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(15, 118, 110, 0.25);
+  background: #115e59;
+}
+
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .products {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .header {
+    padding: 18px 20px;
+  }
+
+  .nav-links {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .badge {
+    width: 100%;
+    text-align: center;
+  }
+}
